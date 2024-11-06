@@ -1,0 +1,10 @@
+stages:
+  train_model:
+    cmd: python train.py --force
+    deps:
+    - data/iris.csv
+    outs:
+    - models/logistic_regression.pkl
+    metrics:
+    - metrics/accuracy.txt:
+        cache: false

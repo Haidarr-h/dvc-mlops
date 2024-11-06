@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  train_model:
+    cmd: python train.py --force
+    deps:
+    - path: data/iris.csv
+      hash: md5
+      md5: 21d441a28bce4417276097df955afc50
+      size: 2928
+    outs:
+    - path: metrics/accuracy.txt
+      hash: md5
+      md5: 8166780a759d8f8a60368be565957d80
+      size: 13
+    - path: models/logistic_regression.pkl
+      hash: md5
+      md5: 385623ff3280c353ba55444950cfa5c6
+      size: 991
